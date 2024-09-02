@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sih_calculator/pages/list_of_teams.dart';
 import 'package:sih_calculator/pages/login.dart';
 import 'package:sih_calculator/utils/shared_preferences.dart';
 
 final theme = ThemeData(
   colorScheme: ColorScheme.fromSeed(
-    seedColor: const Color.fromARGB(255, 156, 27, 255),
+    seedColor: Colors.deepPurpleAccent,
   ),
-  textTheme: GoogleFonts.aladinTextTheme(),
+  textTheme: GoogleFonts.interTextTheme(),
 );
 
 void main() async {
@@ -28,7 +29,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      home: const LoginPage(),
+      home: const ListOfTeams(),
     );
   }
 }
