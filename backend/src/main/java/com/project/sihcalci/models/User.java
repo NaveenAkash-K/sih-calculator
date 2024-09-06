@@ -33,7 +33,7 @@ public class User implements UserDetails {
     @Column(name="role")
     private Role role;
 
-    @OneToMany(mappedBy = "user",cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH})
+    @OneToMany(mappedBy = "user",cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH},fetch = FetchType.EAGER)
     private List<Review> reviews;
 
     @Override
