@@ -93,4 +93,7 @@ backend/*.ipr
 # ### VS Code ###
 .vscode/
 
+frontend/.idea
+backend/.idea
+.idea
 
