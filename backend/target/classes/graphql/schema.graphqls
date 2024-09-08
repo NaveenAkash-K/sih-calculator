@@ -1,0 +1,15 @@
+type Query{
+    firstQuery : String
+    getParameters : [ParameterResponse]
+    getRounds : [RoundResponse]
+    getReviews : [ReviewResponse]
+    getTeams : [TeamResponse]
+}
+
+type Mutation{
+    addParameter(parameter : CreateParameterRequest) : ParameterResponse
+    deleteParameter(id : Float) : String
+    toggleRound(id : Float) : String
+    postReview(createReviewRequest : CreateReviewRequest) : ReviewResponse
+}
+

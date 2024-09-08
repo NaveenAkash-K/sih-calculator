@@ -1,0 +1,58 @@
+input CreateParameterRequest{
+    name : String
+    maxMarks : Int
+}
+
+type ParameterResponse{
+    id : Float
+    name : String
+    maxMarks : Int
+}
+
+type RoundResponse{
+    id : Float
+    isActive : Boolean
+}
+
+input CreateReviewRequest{
+    userId : String
+    teamId : String
+    round : Int
+    scoreRequests : [ScoreRequest]
+}
+
+input ScoreRequest{
+    parameter : String
+    mark : Int
+}
+
+type ReviewResponse{
+    id : String
+    judgeId : String
+    judgeName : String
+    teamId : String
+    teamName : String
+    round : Int
+    scores : [ScoreResponse]
+}
+
+type ScoreResponse{
+    scoreId : String
+    reviewId : String
+    parameter : String
+    mark : Int
+}
+
+type TeamResponse{
+    id : String
+    teamName : String
+    category : Category
+    reviews : ReviewResponse
+}
+
+enum Category{
+    HARDWARE,
+    SOFTWARE
+}
+
+
