@@ -14,8 +14,7 @@ class TeamItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      splashColor: Theme.of(context).colorScheme.primary.withOpacity(0.2),
+    return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
@@ -24,14 +23,12 @@ class TeamItem extends StatelessWidget {
           ),
         );
       },
-      child: Ink(
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
           color: Theme.of(context).colorScheme.primaryContainer,
-          border: const Border(
-            bottom: BorderSide(
-              color: Colors.grey,
-            ),
-          ),
+          border: Border.all(color: Theme.of(context).colorScheme.primary)
         ),
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: Row(
@@ -41,7 +38,10 @@ class TeamItem extends StatelessWidget {
               children: [
                 Text(
                   "Team Name",
-                  style: Theme.of(context).textTheme.bodyLarge,
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyLarge!
+                      .copyWith(fontWeight: FontWeight.bold),
                 ),
                 Text(
                   "#Team ID",

@@ -8,7 +8,7 @@ import 'package:sih_calculator/utils/shared_preferences.dart';
 
 final theme = ThemeData(
   colorScheme: ColorScheme.fromSeed(
-    seedColor: Colors.deepPurpleAccent,
+    seedColor: const Color.fromARGB(255, 153, 0, 255),
   ),
   textTheme: GoogleFonts.interTextTheme(),
 );
