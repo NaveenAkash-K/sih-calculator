@@ -14,7 +14,7 @@ class _EvalPageState extends State<EvalPage> {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            title: Text("Evaluation"),
+            title: const Text("Evaluation"),
             bottom: const TabBar(
               tabs: [
                 Tab(text: 'Round 1'),
@@ -24,14 +24,14 @@ class _EvalPageState extends State<EvalPage> {
             ),
           ),
           body: Padding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: TabBarView(
               children: [
                 Column(
                   children: [
                     Row(
                       children: [
-                        Spacer(),
+                        const Spacer(),
                         Text(
                           "Parameter 2: ",
                           style: Theme.of(context)
@@ -39,9 +39,9 @@ class _EvalPageState extends State<EvalPage> {
                               .bodyLarge!
                               .copyWith(fontWeight: FontWeight.bold),
                         ),
-                        Expanded(
+                        const Expanded(
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: EdgeInsets.all(8.0),
                             child: TextField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(),
@@ -52,12 +52,12 @@ class _EvalPageState extends State<EvalPage> {
                           ),
                         ),
                         // Spacer(),
-                        Spacer(),
+                        const Spacer(),
                       ],
                     ),
                     Row(
                       children: [
-                        Spacer(),
+                        const Spacer(),
                         Text(
                           "Parameter 2: ",
                           style: Theme.of(context)
@@ -65,9 +65,9 @@ class _EvalPageState extends State<EvalPage> {
                               .bodyLarge!
                               .copyWith(fontWeight: FontWeight.bold),
                         ),
-                        Expanded(
+                        const Expanded(
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: EdgeInsets.all(8.0),
                             child: TextField(
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(),
@@ -78,7 +78,7 @@ class _EvalPageState extends State<EvalPage> {
                           ),
                         ),
                         // Spacer(),
-                        Spacer(),
+                        const Spacer(),
                       ],
                     ),
                   ],
@@ -89,7 +89,11 @@ class _EvalPageState extends State<EvalPage> {
                       border: TableBorder.all(),
                       defaultVerticalAlignment:
                           TableCellVerticalAlignment.middle,
-                          columnWidths: {0: FractionColumnWidth(0.4),1: FractionColumnWidth(0.2),2: FractionColumnWidth(0.2)},
+                      columnWidths: const {
+                        0: FractionColumnWidth(0.4),
+                        1: FractionColumnWidth(0.2),
+                        2: FractionColumnWidth(0.2)
+                      },
                       children: [
                         TableRow(
                           children: [
@@ -137,7 +141,7 @@ class _EvalPageState extends State<EvalPage> {
                                   .bodyLarge!
                                   .copyWith(fontWeight: FontWeight.bold),
                             ),
-                            TextField(
+                            const TextField(
                               textAlign: TextAlign.center,
                             ),
                           ],
@@ -160,7 +164,7 @@ class _EvalPageState extends State<EvalPage> {
                                   .bodyLarge!
                                   .copyWith(fontWeight: FontWeight.bold),
                             ),
-                            Center(
+                            const Center(
                               child: TextField(
                                 decoration: InputDecoration(
                                   floatingLabelBehavior:
@@ -189,17 +193,24 @@ class _EvalPageState extends State<EvalPage> {
                                   .bodyLarge!
                                   .copyWith(fontWeight: FontWeight.bold),
                             ),
-                            TextField(
+                            const TextField(
                               textAlign: TextAlign.center,
                             ),
                           ],
                         ),
                       ],
                     ),
-                    ElevatedButton(onPressed: (){}, child: Text("Submit"), style: ElevatedButton.styleFrom(backgroundColor: Theme.of(context).colorScheme.primary, foregroundColor: Colors.white),)
+                    ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor:
+                              Theme.of(context).colorScheme.primary,
+                          foregroundColor: Colors.white),
+                      child: const Text("Submit"),
+                    )
                   ],
                 ),
-                Column(),
+                const Column(),
               ],
             ),
           ),
