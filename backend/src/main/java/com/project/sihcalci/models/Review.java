@@ -26,7 +26,7 @@ public class Review {
     @Column(name = "round")
     private int round;
 
-    @OneToMany(mappedBy = "review",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "review",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     List<Score> scores;
 
 }
