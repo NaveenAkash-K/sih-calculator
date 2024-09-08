@@ -4,6 +4,8 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sih_calculator/pages/list_of_teams.dart';
 import 'package:sih_calculator/pages/login.dart';
+import 'package:sih_calculator/pages/parameters.dart';
+import 'package:sih_calculator/pages/round_toggle.dart';
 import 'package:sih_calculator/utils/shared_preferences.dart';
 
 final theme = ThemeData(
@@ -29,7 +31,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      home: const ListOfTeams(),
+      home: const HackathonRoundsTogglePage(),
     );
   }
 }
